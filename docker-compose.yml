@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  bludit:
+    image: bludit/docker:latest
+    ports:
+      - 8000:80
+    volumes:
+      - ./content:/usr/share/nginx/html/bl-content
+      - ~/theme:/usr/share/nginx/html/bl-themes/j3nko:ro

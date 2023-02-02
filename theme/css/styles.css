@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&display=swap");
+
+body {
+  font-family: "BioRhyme";
+}
+
+#img-jens {
+  max-width: 200px;
+  border-radius: 800px !important;
+  filter: grayscale(100%);
+}
+
+a,
+a.nav-link,
+a:hover,
+a.nav-link:hover {
+  color: darkblue;
+  text-decoration: none;
+}
+
+a.nav-link:hover,
+a:hover {
+  text-decoration: underline dotted;
+}
+
+.container {
+  max-width: 45rem;
+}
