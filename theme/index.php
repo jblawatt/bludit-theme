@@ -11,7 +11,7 @@
     <?php /* echo Theme::favicon("favicon.png"); */ ?>
 
     <?php echo Theme::plugins("siteHead"); ?>
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <meta name="generator" content="Bludit" />
 </head>
 
@@ -36,7 +36,7 @@
         <?php if ($WHERE_AM_I == "home") : ?>
             <div class="row">
                 <div class="col text-center">
-                    <img src="" class="rounded mx-auto d-block" id="img-jens" alt="...">
+                    <img src="<?php echo $site->logo(); ?>" class="rounded mx-auto d-block" id="img-jens" alt="...">
 
                     <div class="mt-5 mb-5 text-small">
                         <small>
@@ -93,7 +93,7 @@
                 </div>
             <?php endforeach; ?>
         <?php else : ?>
-            <h2>NOT FOUND</h2>
+            <h2>NOT FOUND <?php echo $WHERE_AM_I; ?></h2>
         <?php endif; ?>
     </main>
     <footer class="container">
@@ -114,6 +114,10 @@
         </div>
     </footer>
     <?php echo Theme::plugins("siteBodyEnd"); ?>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
 </body>
 
 </html>
